@@ -21,5 +21,12 @@ namespace MyVetApp
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm main = new MainForm();
+            main.Show();
+        }
     }
 }

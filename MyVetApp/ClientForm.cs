@@ -10,29 +10,20 @@ using System.Windows.Forms;
 
 namespace MyVetApp
 {
-    public partial class MainForm : Form
+    public partial class ClientForm : Form
     {
-        public MainForm()
+        public ClientForm()
         {
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
+            
         }
 
-        private void Pets_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             ClientForm pet = new ClientForm();
             pet.Show();
