@@ -147,9 +147,9 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, -58);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(905, 77);
+            this.panel3.Size = new System.Drawing.Size(905, 19);
             this.panel3.TabIndex = 33;
             // 
             // button4
