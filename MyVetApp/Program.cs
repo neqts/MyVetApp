@@ -16,7 +16,7 @@ namespace MyVetApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VisitStartForm());
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -27,8 +27,8 @@ namespace MyVetApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ClientForm pet = new ClientForm();
-            pet.Show();
+            MainForm home = new MainForm();
+            home.Show();
             this.Hide();
         }
 

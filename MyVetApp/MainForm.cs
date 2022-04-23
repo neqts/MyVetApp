@@ -29,7 +29,7 @@ namespace MyVetApp
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void Pets_Click(object sender, EventArgs e)
