@@ -64,5 +64,58 @@ namespace MyVetApp
                 populate();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (ClientId.Text == "")
+            {
+                MessageBox.Show("Enter The Client Id");
+            }
+            else
+            {
+                Con.Open();
+                string query ="delete from ClientTbl where ClientId =" + ClientId.Text + ";";
+                SqlCommand cmd = new SqlCommand(query,Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Client Succesfully Deleted");
+                Con.Close();
+                populate();
+            }
+        }
+
+
+        private void ClientDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = ClientDGV.SelectedCells[0].RowIndex;
+
+            ClientId.Text = ClientDGV.Rows[rowIndex].Cells[0].Value.ToString();
+            ClientName.Text = ClientDGV.Rows[rowIndex].Cells[1].Value.ToString();
+            ClientPassword.Text = ClientDGV.Rows[rowIndex].Cells[2].Value.ToString();
+            ClientPhone.Text = ClientDGV.Rows[rowIndex].Cells[3].Value.ToString();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ClientId.Text == "" || ClientName.Text == "" || ClientPassword.Text == "" || ClientPhone.Text == "") 
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                Con.Open();
+                string query = "update ClientTbl set ClientName ='"+ClientName.Text+"',ClientPassword ='" + ClientPassword.Text +"', ClientPhone ='"+ClientPhone.Text+"' where ClientId="+ClientId.Text+";";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Client Successfully Update");
+                Con.Close();
+                populate();
+            }
+        }
+
+        private void ClientDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

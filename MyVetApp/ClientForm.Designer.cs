@@ -198,6 +198,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "EDIT";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -210,8 +211,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 36);
             this.button3.TabIndex = 14;
-            this.button3.Text = "EDIT";
+            this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ClientDGV
             // 
@@ -221,6 +223,8 @@
             this.ClientDGV.Name = "ClientDGV";
             this.ClientDGV.Size = new System.Drawing.Size(456, 431);
             this.ClientDGV.TabIndex = 15;
+            this.ClientDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientDGV_CellClick);
+            this.ClientDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientDGV_CellContentClick);
             // 
             // button4
             // 

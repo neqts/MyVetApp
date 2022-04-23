@@ -51,27 +51,27 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.AnimalGender = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.AnimalAge = new System.Windows.Forms.TextBox();
+            this.AnimalName = new System.Windows.Forms.TextBox();
+            this.AnimalId = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.AnimalNeutered = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AnimalColor = new System.Windows.Forms.TextBox();
+            this.PetDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PetDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +95,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -327,15 +328,6 @@
             this.button5.Text = "HOME";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(446, 142);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(403, 405);
-            this.dataGridView2.TabIndex = 31;
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.DodgerBlue;
@@ -347,8 +339,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(77, 36);
             this.button6.TabIndex = 30;
-            this.button6.Text = "EDIT";
+            this.button6.Text = "DELETE";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -363,6 +356,7 @@
             this.button7.TabIndex = 29;
             this.button7.Text = "EDIT";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -377,6 +371,7 @@
             this.button8.TabIndex = 28;
             this.button8.Text = "ADD";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label9
             // 
@@ -389,16 +384,16 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Gender";
             // 
-            // comboBox2
+            // AnimalGender
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.AnimalGender.FormattingEnabled = true;
+            this.AnimalGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(206, 305);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 25;
+            this.AnimalGender.Location = new System.Drawing.Point(206, 305);
+            this.AnimalGender.Name = "AnimalGender";
+            this.AnimalGender.Size = new System.Drawing.Size(121, 21);
+            this.AnimalGender.TabIndex = 25;
             // 
             // label10
             // 
@@ -429,31 +424,31 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(43, 156);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 21);
+            this.label12.Size = new System.Drawing.Size(26, 21);
             this.label12.TabIndex = 21;
-            this.label12.Text = "Kind Of Animal";
+            this.label12.Text = "Id";
             // 
-            // textBox6
+            // AnimalAge
             // 
-            this.textBox6.Location = new System.Drawing.Point(206, 254);
-            this.textBox6.MaxLength = 9;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 22;
+            this.AnimalAge.Location = new System.Drawing.Point(206, 254);
+            this.AnimalAge.MaxLength = 9;
+            this.AnimalAge.Name = "AnimalAge";
+            this.AnimalAge.Size = new System.Drawing.Size(121, 20);
+            this.AnimalAge.TabIndex = 22;
             // 
-            // textBox7
+            // AnimalName
             // 
-            this.textBox7.Location = new System.Drawing.Point(206, 204);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 20);
-            this.textBox7.TabIndex = 20;
+            this.AnimalName.Location = new System.Drawing.Point(206, 204);
+            this.AnimalName.Name = "AnimalName";
+            this.AnimalName.Size = new System.Drawing.Size(121, 20);
+            this.AnimalName.TabIndex = 20;
             // 
-            // textBox8
+            // AnimalId
             // 
-            this.textBox8.Location = new System.Drawing.Point(206, 159);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(121, 20);
-            this.textBox8.TabIndex = 19;
+            this.AnimalId.Location = new System.Drawing.Point(206, 159);
+            this.AnimalId.Name = "AnimalId";
+            this.AnimalId.Size = new System.Drawing.Size(121, 20);
+            this.AnimalId.TabIndex = 19;
             // 
             // label13
             // 
@@ -466,16 +461,16 @@
             this.label13.TabIndex = 34;
             this.label13.Text = "Neutered";
             // 
-            // comboBox3
+            // AnimalNeutered
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.AnimalNeutered.FormattingEnabled = true;
+            this.AnimalNeutered.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox3.Location = new System.Drawing.Point(206, 402);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 35;
+            this.AnimalNeutered.Location = new System.Drawing.Point(206, 402);
+            this.AnimalNeutered.Name = "AnimalNeutered";
+            this.AnimalNeutered.Size = new System.Drawing.Size(121, 21);
+            this.AnimalNeutered.TabIndex = 35;
             // 
             // label3
             // 
@@ -488,13 +483,23 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "Color";
             // 
-            // textBox2
+            // AnimalColor
             // 
-            this.textBox2.Location = new System.Drawing.Point(206, 356);
-            this.textBox2.MaxLength = 9;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 37;
+            this.AnimalColor.Location = new System.Drawing.Point(206, 356);
+            this.AnimalColor.MaxLength = 9;
+            this.AnimalColor.Name = "AnimalColor";
+            this.AnimalColor.Size = new System.Drawing.Size(121, 20);
+            this.AnimalColor.TabIndex = 37;
+            // 
+            // PetDGV
+            // 
+            this.PetDGV.BackgroundColor = System.Drawing.Color.White;
+            this.PetDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PetDGV.Location = new System.Drawing.Point(388, 156);
+            this.PetDGV.Name = "PetDGV";
+            this.PetDGV.Size = new System.Drawing.Size(449, 400);
+            this.PetDGV.TabIndex = 38;
+            this.PetDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PetDGV_CellClick);
             // 
             // PetTbl
             // 
@@ -502,35 +507,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(905, 700);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PetDGV);
+            this.Controls.Add(this.AnimalColor);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.AnimalNeutered);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.AnimalGender);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.AnimalAge);
+            this.Controls.Add(this.AnimalName);
+            this.Controls.Add(this.AnimalId);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PetTbl";
             this.Text = "PetTbl";
+            this.Load += new System.EventHandler(this.PetTbl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PetDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,21 +566,21 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox AnimalGender;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox AnimalAge;
+        private System.Windows.Forms.TextBox AnimalName;
+        private System.Windows.Forms.TextBox AnimalId;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox AnimalNeutered;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox AnimalColor;
+        private System.Windows.Forms.DataGridView PetDGV;
     }
 }
