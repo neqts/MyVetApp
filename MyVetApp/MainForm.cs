@@ -24,7 +24,9 @@ namespace MyVetApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            VisitStartForm Visit = new VisitStartForm();
+            Visit.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -36,6 +38,27 @@ namespace MyVetApp
         {
             ClientForm pet = new ClientForm();
             pet.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PetTbl petform = new PetTbl();
+            petform.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DoctorForm Doctor = new DoctorForm();
+            Doctor.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            BasicTreatmentsForm Treatment = new BasicTreatmentsForm();
+            Treatment.Show();
             this.Hide();
         }
     }

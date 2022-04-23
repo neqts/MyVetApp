@@ -107,5 +107,12 @@ namespace MyVetApp
         {
             populate();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MainForm home = new MainForm();
+            home.Show();
+            this.Hide();
+        }
     }
 }

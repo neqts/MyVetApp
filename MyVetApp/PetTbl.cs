@@ -108,6 +108,12 @@ namespace MyVetApp
             AnimalNeutered.Text = PetDGV.Rows[rowIndex].Cells[5].Value.ToString();
           
         }
-      
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MainForm home = new MainForm();
+            home.Show();
+            this.Hide();
+        }
     }
 }

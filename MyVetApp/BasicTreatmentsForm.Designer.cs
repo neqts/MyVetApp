@@ -33,21 +33,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TreatmentHours = new System.Windows.Forms.TextBox();
+            this.TreatmentPrice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TreatmentName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TreatmentDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TreatmentDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -94,21 +95,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "VETERINARY MANAGMENT SYSTEM";
             // 
-            // textBox7
+            // TreatmentHours
             // 
-            this.textBox7.Location = new System.Drawing.Point(219, 230);
-            this.textBox7.MaxLength = 9;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 20);
-            this.textBox7.TabIndex = 57;
+            this.TreatmentHours.Location = new System.Drawing.Point(219, 230);
+            this.TreatmentHours.MaxLength = 9;
+            this.TreatmentHours.Name = "TreatmentHours";
+            this.TreatmentHours.Size = new System.Drawing.Size(121, 20);
+            this.TreatmentHours.TabIndex = 57;
             // 
-            // textBox6
+            // TreatmentPrice
             // 
-            this.textBox6.Location = new System.Drawing.Point(219, 185);
-            this.textBox6.MaxLength = 9;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 55;
+            this.TreatmentPrice.Location = new System.Drawing.Point(219, 185);
+            this.TreatmentPrice.MaxLength = 9;
+            this.TreatmentPrice.Name = "TreatmentPrice";
+            this.TreatmentPrice.Size = new System.Drawing.Size(121, 20);
+            this.TreatmentPrice.TabIndex = 55;
             // 
             // label9
             // 
@@ -134,15 +135,7 @@
             this.button4.TabIndex = 53;
             this.button4.Text = "HOME";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(442, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(395, 405);
-            this.dataGridView1.TabIndex = 52;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -155,8 +148,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 36);
             this.button3.TabIndex = 50;
-            this.button3.Text = "EDIT";
+            this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -171,6 +165,7 @@
             this.button2.TabIndex = 49;
             this.button2.Text = "EDIT";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -185,14 +180,15 @@
             this.button1.TabIndex = 48;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox5
+            // TreatmentName
             // 
-            this.textBox5.Location = new System.Drawing.Point(219, 140);
-            this.textBox5.MaxLength = 11;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 20);
-            this.textBox5.TabIndex = 51;
+            this.TreatmentName.Location = new System.Drawing.Point(219, 140);
+            this.TreatmentName.MaxLength = 11;
+            this.TreatmentName.Name = "TreatmentName";
+            this.TreatmentName.Size = new System.Drawing.Size(121, 20);
+            this.TreatmentName.TabIndex = 51;
             // 
             // label8
             // 
@@ -225,32 +221,44 @@
             this.panel3.Size = new System.Drawing.Size(905, 19);
             this.panel3.TabIndex = 58;
             // 
+            // TreatmentDGV
+            // 
+            this.TreatmentDGV.BackgroundColor = System.Drawing.Color.White;
+            this.TreatmentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TreatmentDGV.Location = new System.Drawing.Point(394, 122);
+            this.TreatmentDGV.Name = "TreatmentDGV";
+            this.TreatmentDGV.Size = new System.Drawing.Size(443, 431);
+            this.TreatmentDGV.TabIndex = 59;
+            this.TreatmentDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreatmentDGV_CellClick);
+            this.TreatmentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreatmentDGV_CellContentClick);
+            // 
             // BasicTreatmentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(905, 700);
+            this.Controls.Add(this.TreatmentDGV);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.TreatmentHours);
+            this.Controls.Add(this.TreatmentPrice);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.TreatmentName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BasicTreatmentsForm";
             this.Text = "BasicTreatmentsForm";
+            this.Load += new System.EventHandler(this.BasicTreatmentsForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TreatmentDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,17 +270,17 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TreatmentHours;
+        private System.Windows.Forms.TextBox TreatmentPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TreatmentName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView TreatmentDGV;
     }
 }
