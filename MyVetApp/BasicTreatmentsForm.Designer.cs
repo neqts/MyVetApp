@@ -100,7 +100,7 @@
             // TreatmentHours
             // 
             this.TreatmentHours.Location = new System.Drawing.Point(219, 230);
-            this.TreatmentHours.MaxLength = 9;
+            this.TreatmentHours.MaxLength = 120;
             this.TreatmentHours.Name = "TreatmentHours";
             this.TreatmentHours.Size = new System.Drawing.Size(121, 20);
             this.TreatmentHours.TabIndex = 57;

@@ -52,6 +52,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ClientPhoneTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -86,11 +89,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(350, 55);
+            this.label2.Location = new System.Drawing.Point(382, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 33);
+            this.label2.Size = new System.Drawing.Size(83, 33);
             this.label2.TabIndex = 2;
-            this.label2.Text = "VISIT START";
+            this.label2.Text = "VISITS";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -227,7 +231,7 @@
             this.VisitStartDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.VisitStartDGV.Location = new System.Drawing.Point(388, 150);
             this.VisitStartDGV.Name = "VisitStartDGV";
-            this.VisitStartDGV.Size = new System.Drawing.Size(449, 400);
+            this.VisitStartDGV.Size = new System.Drawing.Size(449, 355);
             this.VisitStartDGV.TabIndex = 58;
             this.VisitStartDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VisitStartDGV_CellClick);
             // 
@@ -309,12 +313,43 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Tomasz Topór Copyright ©";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.Control;
+            this.button5.Location = new System.Drawing.Point(563, 540);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(78, 36);
+            this.button5.TabIndex = 68;
+            this.button5.Text = "PRINT";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // VisitStartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(905, 700);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.ClientPhoneTb);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -336,6 +371,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VisitStartForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisitStartForm";
             this.Load += new System.EventHandler(this.VisitStartForm_Load);
             this.panel1.ResumeLayout(false);
@@ -374,5 +410,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ClientPhoneTb;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button5;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

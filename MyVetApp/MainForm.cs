@@ -61,5 +61,18 @@ namespace MyVetApp
             Treatment.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AboutUs About = new AboutUs();
+            About.Show();
+           
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DashBoard Board = new DashBoard();
+            Board.Show();
+        }
     }
 }

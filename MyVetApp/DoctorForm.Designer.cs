@@ -262,7 +262,7 @@
             // DoctorCertification
             // 
             this.DoctorCertification.Location = new System.Drawing.Point(212, 393);
-            this.DoctorCertification.MaxLength = 9;
+            this.DoctorCertification.MaxLength = 50;
             this.DoctorCertification.Name = "DoctorCertification";
             this.DoctorCertification.Size = new System.Drawing.Size(121, 20);
             this.DoctorCertification.TabIndex = 36;
@@ -354,6 +354,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DoctorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorForm";
             this.Load += new System.EventHandler(this.DoctorForm_Load);
             this.panel1.ResumeLayout(false);
