@@ -53,8 +53,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.DoctorAge = new System.Windows.Forms.TextBox();
             this.DoctorDGV = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,10 +241,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 681);
+            this.panel3.Location = new System.Drawing.Point(0, 669);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(905, 19);
+            this.panel3.Size = new System.Drawing.Size(905, 31);
             this.panel3.TabIndex = 34;
             // 
             // label9
@@ -311,6 +314,17 @@
             this.DoctorDGV.TabIndex = 41;
             this.DoctorDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorDGV_CellClick);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(353, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(177, 17);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Tomasz Topór Copyright ©";
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +359,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -377,5 +393,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox DoctorAge;
         private System.Windows.Forms.DataGridView DoctorDGV;
+        private System.Windows.Forms.Label label7;
     }
 }

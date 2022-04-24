@@ -45,8 +45,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.TreatmentDGV = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TreatmentDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,10 +217,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 681);
+            this.panel3.Location = new System.Drawing.Point(0, 669);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(905, 19);
+            this.panel3.Size = new System.Drawing.Size(905, 31);
             this.panel3.TabIndex = 58;
             // 
             // TreatmentDGV
@@ -231,6 +234,17 @@
             this.TreatmentDGV.TabIndex = 59;
             this.TreatmentDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreatmentDGV_CellClick);
             this.TreatmentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreatmentDGV_CellContentClick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(346, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 17);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Tomasz Topór Copyright ©";
             // 
             // BasicTreatmentsForm
             // 
@@ -258,6 +272,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TreatmentDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,5 +298,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView TreatmentDGV;
+        private System.Windows.Forms.Label label5;
     }
 }
