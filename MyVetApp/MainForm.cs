@@ -74,5 +74,11 @@ namespace MyVetApp
             DashBoard Board = new DashBoard();
             Board.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            TipsForm tips = new TipsForm();
+            tips.Show();
+        }
     }
 }

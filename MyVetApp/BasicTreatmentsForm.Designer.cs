@@ -267,6 +267,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BasicTreatmentsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BasicTreatmentsForm";
             this.Load += new System.EventHandler(this.BasicTreatmentsForm_Load);
             this.panel1.ResumeLayout(false);

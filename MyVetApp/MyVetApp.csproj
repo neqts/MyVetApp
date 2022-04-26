@@ -102,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipsForm.Designer.cs">
+      <DependentUpon>TipsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisitStartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TipsForm.resx">
+      <DependentUpon>TipsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VisitStartForm.resx">
       <DependentUpon>VisitStartForm.cs</DependentUpon>
     </EmbeddedResource>
