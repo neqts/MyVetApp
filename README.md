@@ -1,5 +1,5 @@
 # MyVetApp
-Aplikacja weterynaryjna
+Aplikacja weterynaryjna<br>
 1.System logowania (baza klientow podpieta do bazy danych tylko klienci znajdowani sie w bazie danych moga sie zalogowac)<br>
 2.splash layout (ladowanie aplikacji)<br>
 3.formularz doktora wraz z baza danych<br>
